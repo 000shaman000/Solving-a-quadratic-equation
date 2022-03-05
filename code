@@ -1,0 +1,48 @@
+#include <iostream>
+#include <math.h>
+
+int main()
+{
+    
+    float x1 = 0;
+    float x2 = 0;
+    
+    std::cout << "Приведите уравнение к виду ax^2+bx+c"<<std::endl; 
+    
+    std::cout << "Введите a . Если число не целое введите через точку. Пример 5.54"<<std::endl;
+    float a = 0;
+    std::cin>>a;
+    std::cout << "Введите b. Если число не целое введите через точку. Пример 5.54"<<std::endl;
+    float b = 0;
+    std::cin>>b;
+    std::cout << "Введите c. Если число не целое введите через точку. Пример 5.54"<<std::endl;
+    float c = 0;
+    std::cin>>c;
+    
+    float d=(b*b)-(4*a*c);
+    
+    if (d<0)
+    { std::cout << "Корней нет"<<std::endl; 
+        return 0;
+    } 
+    
+    else if (d>0) 
+    { x1=(-b-sqrt(d))/2/a;
+      x2=(-b+sqrt(d))/2/a; 
+    }
+    else  
+    { x1=x2=-(b-2*a) ; }
+    
+    
+    if (x1==-0) 
+    {x1=0;}
+    if (x2==-0)
+    {x2=0;}
+   
+   
+    
+    std::cout <<"X1 = "<<x1<<std::endl;
+    std::cout <<"X2 = "<<x2<<std::endl;
+    
+} 
+
